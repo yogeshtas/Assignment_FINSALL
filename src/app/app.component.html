@@ -1,0 +1,50 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<div>
+  <!--<ng-select [items]="cities" bindLabel="city" bindValue="city" [(ngModel)]="city">
+			</ng-select>-->
+  <form class="form-horizontal">
+    <div class="form-group col-sm-12">
+      <!--<label for="role" class="col-sm-2 control-label" style="text-align:left"><h5><b>Vendor<sup style="color: red;">*</sup></b></h5></label>-->
+      <div class="col-sm-6">
+        <!--<label>From</label>-->
+        <ng-select [items]="items" 
+            bindLabel="name" 
+            placeholder="From"
+            name="selected"      
+            [(ngModel)]="selected" 
+            addTagText="Create New" 
+            [addTag]="CreateNew">
+      </ng-select>
+      </div>
+      <div class="col-sm-6">
+        <!--<label>To</label>-->
+        <ng-select [items]="items" 
+            bindLabel="name" 
+            placeholder="To"
+            name="selectedTo"      
+            [(ngModel)]="selectedTo" 
+            addTagText="Create New" 
+            [addTag]="CreateNew">
+      </ng-select>
+      </div>
+    </div>
+  </form>
+
+</div>
+
+
+
+
+
+
+<router-outlet></router-outlet>
