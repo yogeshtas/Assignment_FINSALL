@@ -12,7 +12,7 @@
 <div>
   <!--<ng-select [items]="cities" bindLabel="city" bindValue="city" [(ngModel)]="city">
 			</ng-select>-->
-  <form class="form-horizontal">
+  <form class="form-horizontal" (ngSubmit)="onSubmit();">
     <div class="form-group col-sm-12">
       <!--<label for="role" class="col-sm-2 control-label" style="text-align:left"><h5><b>Vendor<sup style="color: red;">*</sup></b></h5></label>-->
       <div class="col-sm-6">
@@ -23,7 +23,7 @@
             name="selected"      
             [(ngModel)]="selected" 
             addTagText="Create New" 
-            [addTag]="CreateNew">
+            [addTag]="CreateNew" required>
       </ng-select>
       </div>
       <div class="col-sm-6">
@@ -34,13 +34,16 @@
             name="selectedTo"      
             [(ngModel)]="selectedTo" 
             addTagText="Create New" 
-            [addTag]="CreateNew">
+            [addTag]="CreateNew" required>
       </ng-select>
       </div>
     </div>
+    <button type="submit" style="margin-right:5px;">Draw</button>
   </form>
 
 </div>
+
+<div id="container" style="height: 400px"></div>
 
 
 

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 // import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { FormsModule } from "@angular/forms";
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HighchartsChartModule } from "highcharts-angular";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgSelectModule
+    NgSelectModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
